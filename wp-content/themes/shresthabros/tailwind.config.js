@@ -1,0 +1,86 @@
+/** @type {import('tailwindcss').Config} */
+
+module.exports = {
+  content: [
+    './*.{html,js,php}', 
+    '**/*.php',
+    '*.php',
+  ],
+  theme: {
+    blur: {
+      xs: '2px',
+      sm: '5px'
+    },
+    borderWidth: {
+      DEFAULT: '1px',
+      '0': '0',
+      '2': '2px',
+      '3': '3px',
+      '4': '4px',
+      '6': '6px',
+      '8': '8px',
+    },
+    fontFamily: {
+      'lora': ['Lora, sans-serif'],
+      'body': ['Roboto, sans-serif'],
+    },
+    fontSize: {
+      xs: '0.5rem',
+      sm: '0.8rem',
+      base: '1rem',
+      xl: '1.25rem',
+      '2xl': '1.6rem',
+      '3xl': '2rem',
+      '4xl': '2.441rem',
+      '5xl': '3.052rem',
+    },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1180px',
+      '2xl': '1536px',
+    },
+    colors: {
+      white: '#ffffff',
+      default: '#000000',
+      primary: '#cc9a6a',
+      secondary: '#993f3f',
+      black:    '#000000',
+      gray:   {
+        50: '#f9fafb',
+        100: '#f3f4f6',
+        200: '#e5e7eb',
+        300: '#d1d5db',
+        400: '#9ca3af',
+        500: '#6b7280',
+        600: '#4b5563',
+        700: '#374151',
+        800: '#1f2937',
+        900: '#111827',
+        950: '#030712',
+      },
+      red:   {
+        50: '#fef2f2',
+        100: '#fee2e2',
+        200: '#fecaca',
+        300: '#fca5a5',
+        400: '#f87171',
+        500: '#ef4444',
+        600: '#dc2626',
+        700: '#b91c1c',
+        800: '#991b1b',
+        900: '#7f1d1d',
+        950: '#450a0a',
+      },
+    },
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      'default': '#000000',
+      'primary': '#cc9a6a',
+      'secondary': '#993f3f',
+    }),
+    extend: {},
+  },
+  plugins: [],
+}
