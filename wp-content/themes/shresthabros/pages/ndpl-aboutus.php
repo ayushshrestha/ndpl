@@ -181,19 +181,19 @@
     
         <div class="max-w-screen-xl mx-auto">
             <h2 class="text-4xl font-bold">History</h2>
-            <div><?php the_field('our_values_subtitle'); ?></div>
-
+            <div><?php the_field('our_history_subtitle'); ?></div>
             <?php $the_query = new WP_Query('post_type=history'); ?> 
-                <div class="mt-10">
-                    <ul>           
-                        <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-                        <li class="grid grid-cols-4 gap-10">
-                            <h4 class="text-4xl font-bold font-lora mb-3"><?php the_title(); ?></h4>
-                            <div class="col-span-3 mb-5"><?php echo get_the_content();?> </div>
-                        </li>
-                        <?php endwhile; wp_reset_postdata(); ?>
-                    </ul>
-                </div>
+            <ol class="relative border-s border-primary dark:border-primary mt-10 py-10">    
+                <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>              
+                <li class="mb-10 ms-4">
+                    <div class="absolute w-3 h-3 bg-primary rounded-full mt-12 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <div class="bg-white p-6 rounded-md">
+                    <time class="text-4xl font-bold font-lora mb-3 text-gray-800 dark:text-gray-500"><?php the_title(); ?></time>
+                    <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"><?php echo get_the_content();?></div>
+                    </div>
+                </li>
+                <?php endwhile; wp_reset_postdata(); ?>
+            </ol>
                 
             </div>
         
@@ -265,7 +265,7 @@
                                     </a>
                                 </figure>
                             </div>
-                            <h4 class="text-2xl font-bold font-lora mb-3"><?php the_title(); ?></h4>
+                            <h4 class="text-2xl font-bold font-lora"><?php the_title(); ?></h4>
                             <div class="col-span-3 mb-5"><?php echo get_the_content();?> </div>
                         </li>
                         <?php endwhile; wp_reset_postdata(); ?>

@@ -213,6 +213,11 @@ function add_additional_class_on_li($classes, $item, $wpNavMenu) {
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
+function is_admin_logged_in() {
+    return is_user_logged_in() && current_user_can('administrator') && is_admin();
+}
+
+
 /**
  * Enqueue scripts and styles.
  */

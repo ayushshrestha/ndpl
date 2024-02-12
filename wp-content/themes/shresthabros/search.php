@@ -12,12 +12,12 @@ get_header();
 	<?php if ( have_posts() ) : ?>
 
 
-	<div class="text-center relative">
+	<div class="text-center relative" data-scroll-section>
 		<div class="w-full py-40 bg-black/60">
 			<h3 class="font-bold text-3xl text-white"><?php printf( esc_html__( 'Search Results for: %s', 'shresthabros' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
 		</div>
 	</div>
-	<main id="primary" class="site-main py-10 max-w-screen-xl mx-auto px-4">
+	<main id="primary" class="site-main py-10 max-w-screen-xl mx-auto px-4" data-scroll-section>
 		<div class="grid gap-8 sm:grid-cols-2">
 			<?php
 			/* Start the Loop */
