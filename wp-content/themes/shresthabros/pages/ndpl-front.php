@@ -49,7 +49,7 @@
 
         <?php if( have_rows('aboutus_banner') ): ?>
         <?php while( have_rows('aboutus_banner') ): the_row(); $aboutusBannerImage = get_sub_field('aboutus_banner_image');?>
-            <div class="py-10 aboutus_banner aboutus_banner--red-transparent relative flex items-center" style="background:url('<?php echo $aboutusBannerImage['url'];?>') no-repeat center center; background-size:cover;" data-scroll-section>
+            <div class="py-10 aboutus_banner aboutus_banner--red-transparent relative flex items-center hidden" style="background:url('<?php echo $aboutusBannerImage['url'];?>') no-repeat center center; background-size:cover;" data-scroll-section>
                 <?php if( have_rows('aboutus_banner_caption') ): ?>
                 <?php while( have_rows('aboutus_banner_caption') ): the_row(); ?>
                 <div class="max-w-screen-xl mx-auto px-4" data-scroll data-scroll-speed="2">
@@ -347,16 +347,20 @@
 
         <?php if( have_rows('apply_dealerships') ): ?>
         <?php while( have_rows('apply_dealerships') ): the_row(); $applyDealershipsBannerImage = get_sub_field('apply_dealership_background_image');?>
-        <div class="text-center relative overflow-hidden" data-scroll-section>
-            <div class="w-full h-screen absolute left-0 top-0"  style="background:url('<?php echo $applyDealershipsBannerImage['url'];?>') no-repeat center center; background-size:cover;"  data-swiper-parallax="30%" data-scroll data-scroll-speed="-2"></div>
-            <div class="w-full py-20 md:py-40 bg-black/60 z-10 relative">
-                <div class="max-w-screen-xl mx-auto px-4 text-white" data-scroll data-scroll-speed="2">
-                    <h2 class="mb-3 text-4xl font-bold tracking-[-0.04em] sm:leading-[3.5rem]"><?php the_sub_field('apply_dealership_title'); ?></h2>
-                    <h3 class="mb-8 text-xl"><?php the_sub_field('apply_dealership_paragraph'); ?></h3>
-                    <a href="" title="Domestic" class="bg-transparent hover:bg-primary text-primary font-semibold sm:leading-[3.5rem] hover:text-white py-4 px-8 border border-primary hover:border-transparent rounded transition">Domestic</a>
-                    <a href="" title="International" class="bg-transparent hover:bg-primary text-primary font-semibold sm:leading-[3.5rem] hover:text-white py-4 px-8 border border-primary hover:border-transparent rounded transition">International</a>
-                </div>
+        <div class="text-center relative overflow-hidden max-w-screen-xl mx-auto my-20" data-scroll-section>
+            <div class="grid grid-cols-2">
+                <div class="w-full h-screen absolute left-0 top-0"  style="background:url('<?php echo $applyDealershipsBannerImage['url'];?>') no-repeat center center; background-size:cover;"  data-swiper-parallax="30%" data-scroll data-scroll-speed="-2"></div>
+                
+                <div class="w-full py-20 md:py-40 bg-black/60 z-10 relative">
+                    <div class="max-w-screen-xl mx-auto px-4 text-white" data-scroll data-scroll-speed="2">
+                        <h2 class="mb-3 text-4xl font-bold tracking-[-0.04em] sm:leading-[3.5rem]"><?php the_sub_field('apply_dealership_title'); ?></h2>
+                        <h3 class="mb-8 text-xl"><?php the_sub_field('apply_dealership_paragraph'); ?></h3>
+                        <a href="" title="Domestic" class="bg-transparent hover:bg-primary text-primary font-semibold sm:leading-[3.5rem] hover:text-white py-4 px-8 border border-primary hover:border-transparent rounded transition">Domestic</a>
+                        <a href="" title="International" class="bg-transparent hover:bg-primary text-primary font-semibold sm:leading-[3.5rem] hover:text-white py-4 px-8 border border-primary hover:border-transparent rounded transition">International</a>
+                    </div>
+                </div>    
             </div>
+            
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
@@ -369,7 +373,7 @@
         ?>
         <div class="text-center relative md:mt-10x" style="background:url('<?php echo $applyCareersBannerImage['url'];?>') no-repeat center center; background-size:cover;" data-scroll-section>
             <div class="w-full py-20 bg-black/60">
-                <div class="max-w-screen-xl mx-auto px-4 text-white mb-10 ">
+                <div class="max-w-screen-xl mx-auto px-4 text-white pb-10 ">
                     <h2 class="mb-3 text-4xl font-bold tracking-[-0.04em] sm:leading-[3.5rem]"><?php the_sub_field('apply_careers_title'); ?></h2>
                     <h3 class="text-xl"><?php the_sub_field('apply_careers_paragraph'); ?></h3>
                 </div>
