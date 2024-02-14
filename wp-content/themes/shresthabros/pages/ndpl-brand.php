@@ -61,6 +61,7 @@
                                         <?php }?>
                                     </div>
                                     <?php endif; ?>
+                                    <h6 class="font-lora mb-2"><?php the_field('shop_url'); ?></h6>
                                 </div>
                             </div>
                         </li>
