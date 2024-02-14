@@ -2111,6 +2111,10 @@ Header
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:no-underline:hover {
+  text-decoration-line: none;
+}
+
 .hover\:opacity-10:hover {
   opacity: 0.1;
 }
