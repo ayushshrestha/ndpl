@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main py-10 max-w-screen-xl mx-auto px-4" data-scroll-section>
+	<main id="primary" class="site-main py-10 max-w-screen-md mx-auto px-4" data-scroll-section>
 
 		<?php
 		while ( have_posts() ) :

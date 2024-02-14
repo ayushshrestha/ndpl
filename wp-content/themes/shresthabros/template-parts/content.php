@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('mb-20'); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="entry-meta mb-5 ">
 				<?php
 				shresthabros_posted_on();
 				shresthabros_posted_by();
@@ -31,7 +31,7 @@
 
 	<?php shresthabros_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content mt-7">
 		<?php
 		the_content(
 			sprintf(

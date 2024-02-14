@@ -127,7 +127,7 @@ add_action( 'after_setup_theme', 'shresthabros_setup' );
 
 
 function remove_footer_admin(){
-	echo '<span>Design and Developed by <a href="https://www.shresthabros.com">ShresthaBros</a></span>';
+	echo '<span>Design and Developed by <a href="https://sbresearch.co/">SB Research and Development</a></span>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 
@@ -138,6 +138,9 @@ function annointed_admin_bar_remove() {
 	$wp_admin_bar->remove_menu('wp-logo');
 	}
 add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
+
+
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -159,7 +162,6 @@ if ( !function_exists('tf_wp_admin_login_logo') ) :
         <style type="text/css">
             body.login div#login h1 a {
                 background-image: url('<?php echo get_template_directory_uri()."/images/logo-ndpl.png"; ?>');
-                
             }
         </style>
     <?php }

@@ -54,33 +54,34 @@
         </div>
 
         <div class="max-w-screen-xl mx-auto" data-scroll-section>
+        <h2 class="text-2xl font-bold tracking-tight pt-12 dark:text-zinc-100">CSR Activities</h2>
         <?php if( have_rows('csr_activities') ): ?>
             <?php while( have_rows('csr_activities') ): the_row();  ?>
                 <div class="grid grid-cols-4 gap-10 mt-10 text-center bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
-                    <div>
+                    <a href="<?php echo get_site_url();?>/categorie/health" class="hover:opacity-50 transition ease duration-700">
                         <div class="mb-3"><?php $image = get_sub_field('image'); ?> 
-                            <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100"><img src="<?php echo $image['url'];?>" /></div>
+                            <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100"><img class="object-cover w-36 h-36" src="<?php echo $image['url'];?>" /></div>
                         </div>
-                        <h2 class="my-3 text-2xl font-bold"><?php the_sub_field('title'); ?></h2>
-                    </div>
-                    <div>
+                        <h2 class="my-3 text-xl font-bold"><?php the_sub_field('title'); ?></h2>
+                    </a>
+                    <a href="<?php echo get_site_url();?>/categorie/environment" class="hover:opacity-50 transition ease duration-700">
                         <div class="mb-3"><?php $image_1 = get_sub_field('image_1'); ?> 
-                            <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100"><img src="<?php echo $image_1['url'];?>" /></div>
+                            <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100"><img class="object-cover w-36 h-36" src="<?php echo $image_1['url'];?>" /></div>
                         </div>
-                        <h2 class="my-3 text-2xl font-bold"><?php the_sub_field('title_1'); ?></h2>
-                    </div>
-                    <div>
+                        <h2 class="my-3 text-xl font-bold"><?php the_sub_field('title_1'); ?></h2>
+                    </a>
+                    <a href="<?php echo get_site_url();?>/categorie/education" class="hover:opacity-50 transition ease duration-700">
                         <div class="mb-3"><?php $image_2 = get_sub_field('image_2'); ?> 
-                            <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100"><img src="<?php echo $image_2['url'];?>" /></div>
+                            <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100"><img class="object-cover w-36 h-36" src="<?php echo $image_2['url'];?>" /></div>
                         </div>
-                        <h2 class="my-3 text-2xl font-bold"><?php the_sub_field('title_2'); ?></h2>
-                    </div>
-                    <div>
+                        <h2 class="my-3 text-xl font-bold"><?php the_sub_field('title_2'); ?></h2>
+                    </a>
+                    <a href="<?php echo get_site_url();?>/categorie/poverty-alleviation" class="hover:opacity-50 transition ease duration-700">
                         <div class="mb-3"><?php $image_3 = get_sub_field('image_3'); ?> 
-                            <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100"><img src="<?php echo $image_3['url'];?>" /></div>
+                            <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100"><img class="object-cover w-36 h-36" src="<?php echo $image_3['url'];?>" /></div>
                         </div>
-                        <h2 class="my-3 text-2xl font-bold"><?php the_sub_field('title_3'); ?></h2>
-                    </div>
+                        <h2 class="my-3 text-xl font-bold"><?php the_sub_field('title_3'); ?></h2>
+                    </a>
                 </div>
             <?php endwhile; ?>
             <?php endif; ?> 
