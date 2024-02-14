@@ -141,7 +141,6 @@ add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
 
 
 
-
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -162,6 +161,7 @@ if ( !function_exists('tf_wp_admin_login_logo') ) :
         <style type="text/css">
             body.login div#login h1 a {
                 background-image: url('<?php echo get_template_directory_uri()."/images/logo-ndpl.png"; ?>');
+                
             }
         </style>
     <?php }
