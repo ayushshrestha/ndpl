@@ -39,7 +39,7 @@
     <div class="max-w-screen-xl mx-auto px-4 py-20 md:pb-40" data-scroll-section>
 
         <div class="grid grid-cols-3 gap-10 mt-10">
-            <?php $the_query = new WP_Query('post_type=role', $args); ?>    
+            <?php $the_query = new WP_Query('post_type=role'); ?>    
             <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                 <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
                     <h2 class="mb-3 text-2xl font-bold"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>

@@ -83,10 +83,10 @@
                     <div class="max-w-screen-xl mx-auto px-4 pb-20 text-center">
                     <?php if( have_rows('ourvalues_banner_caption') ): ?>
                     <?php while( have_rows('ourvalues_banner_caption') ): the_row(); ?>
-                        <h2 class="text-3xl font-bold tracking-[-0.04em] text-primary sm:text-5xl"><?php the_sub_field('ourvision_banner_title_large'); ?></h2>
-                        <h4 class="text-xl text-gray-600 font-boldx sm:leading-[2.5rem] mb-10"><?php the_sub_field('our_vision_content'); ?></h4>
+                        <h2 class="text-4xl font-bold tracking-[-0.04em] text-primary"><?php the_sub_field('ourvision_banner_title_large'); ?></h2>
+                        <h4 class="text-xl text-gray-600 font-bold sm:leading-[2.5rem]X mb-10"><?php the_sub_field('our_vision_content'); ?></h4>
 
-                        <h2 class="mb-3 text-3xl font-bold tracking-[-0.04em] text-primary sm:text-3xl"><?php the_sub_field('ourvalues_banner_title_large'); ?></h2>
+                        <h2 class="mb-3 text-3xl font-bold tracking-[-0.04em] text-primary sm:text-3xlX"><?php the_sub_field('ourvalues_banner_title_large'); ?></h2>
                         <?php if( have_rows('ourvalues_content') ): ?>
                         <?php while( have_rows('ourvalues_content') ): the_row(); ?>
                         <div class="grid md:grid-cols-4 md:gap-5 pb-10" data-swiper-parallax="30%" data-scroll data-scroll-speed="1">
@@ -352,7 +352,7 @@
                 <div class="w-full h-screen absolute left-0 top-0"  style="background:url('<?php echo $applyDealershipsBannerImage['url'];?>') no-repeat center center; background-size:cover;"  data-swiper-parallax="30%" data-scroll data-scroll-speed="-2"></div>
                 
                 <div class="w-full py-20 md:py-40 bg-black/60 z-10 relative">
-                    <div class="max-w-screen-xl mx-auto px-4 text-white" data-scroll data-scroll-speed="2">
+                    <div class="max-w-screen-xl mx-auto px-8 text-white" data-scroll data-scroll-speed="2">
                         <h2 class="mb-3 text-4xl font-bold tracking-[-0.04em] sm:leading-[3.5rem]"><?php the_sub_field('apply_dealership_title'); ?></h2>
                         <h3 class="mb-8 text-xl"><?php the_sub_field('apply_dealership_paragraph'); ?></h3>
                         <a href="" title="Domestic" class="bg-transparent hover:bg-primary text-primary font-semibold sm:leading-[3.5rem] hover:text-white py-4 px-8 border border-primary hover:border-transparent rounded transition">Domestic</a>

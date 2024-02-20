@@ -37,34 +37,50 @@
     </div>
     
     <div class="max-w-screen-xl mx-auto px-4 py-20 md:text-center" data-scroll-section>
-        <h2 class="text-4xl font-bold"><?php the_field('our_achievement_title'); ?></h2>
+        <h2 class="text-4xl font-bold mb-36"><?php the_field('our_achievement_title'); ?></h2>
 
         <?php if( have_rows('our_achievement_content') ): ?> 
         <?php while( have_rows('our_achievement_content') ): the_row(); ?>
-            <div class="grid grid-cols-3 gap-10 mt-10">
-                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
-                    <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_1'); ?></h2>
+            <div class="grid grid-cols-3X flex-col gap-10 mt-10">
+                <div class="bg-gray-50 shadow-[0_0_30px_10px_rgba(0,0,0,0.03)] p-10 rounded-lg mb-24">
+                    <div class="mb-3 -mt-36"> 
+                        <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100">
+                            <?php $image_1 = get_sub_field('image_1'); ?> 
+                            <img class="object-cover w-36 h-36" src="<?php echo $image_1['url'];?>">
+                        </div>
+                    </div>
+                    <h2 class=" text-2xl font-bold"><?php the_sub_field('second_title_1'); ?></h2>
                     <div class="mb-0"><?php the_sub_field('second_paragraph_1'); ?></div>
                 </div>
-                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
-                    <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_2'); ?></h2>
+                <div class="bg-gray-50 shadow-[0_0_30px_10px_rgba(0,0,0,0.03)] p-10 rounded-lg mb-24">
+                    <div class="mb-3 -mt-36"> 
+                        <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100">
+                            <?php $image_2 = get_sub_field('image_2'); ?> 
+                            <img class="object-cover w-36 h-36" src="<?php echo $image_2['url'];?>">
+                        </div>
+                    </div>
+                    <h2 class=" text-2xl font-bold"><?php the_sub_field('second_title_2'); ?></h2>
                     <div class="mb-0"><?php the_sub_field('second_paragraph_2'); ?></div>
                 </div>
-                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
-                    <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_3'); ?></h2>
+                <div class="bg-gray-50 shadow-[0_0_30px_10px_rgba(0,0,0,0.03)] p-10 rounded-lg mb-24">
+                    <div class="mb-3 -mt-36"> 
+                        <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100">
+                            <?php $image_3 = get_sub_field('image_3'); ?> 
+                            <img class="object-cover w-36 h-36" src="<?php echo $image_3['url'];?>">
+                        </div>
+                    </div>
+                    <h2 class=" text-2xl font-bold"><?php the_sub_field('second_title_3'); ?></h2>
                     <div class="mb-0"><?php the_sub_field('second_paragraph_3'); ?></div>
                 </div>
-                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
-                    <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_4'); ?></h2>
+                <div class="bg-gray-50 shadow-[0_0_30px_10px_rgba(0,0,0,0.03)] p-10 rounded-lg mb-36x">
+                    <div class="mb-3 -mt-36"> 
+                        <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100">
+                            <?php $image_4 = get_sub_field('image_4'); ?> 
+                            <img class="object-cover w-36 h-36" src="<?php echo $image_4['url'];?>">
+                        </div>
+                    </div>
+                    <h2 class=" text-2xl font-bold"><?php the_sub_field('second_title_4'); ?></h2>
                     <div class="mb-0"><?php the_sub_field('second_paragraph_4'); ?></div>
-                </div>
-                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
-                    <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_5'); ?></h2>
-                    <div class="mb-0"><?php the_sub_field('second_paragraph_5'); ?></div>
-                </div>
-                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
-                    <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_6'); ?></h2>
-                    <div class="mb-0"><?php the_sub_field('second_paragraph_6'); ?></div>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -78,8 +94,8 @@
 
             <?php if( have_rows('our_vision_content') ): ?>
             <?php while( have_rows('our_vision_content') ): the_row(); ?>
-                <div class="mt-10 text-left">
-                    <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
+                <div class="mt-5 text-center text-gray-500">
+                    <div class="">
                         <h2 class="my-3 text-2xl font-bold"><?php the_sub_field('second_title_1'); ?></h2>
                         <div class="mb-0"><?php the_sub_field('second_paragraph_1'); ?></div>
                     </div>

@@ -4,7 +4,7 @@
  * Plugin Name: Contact Form 7 - Dynamic Text Extension
  * Plugin URI: https://sevenspark.com/goods/contact-form-7-dynamic-text-extension
  * Description: This plugin extends Contact Form 7 by adding dynamic form fields that accept any shortcode to generate default values and placeholder text. Requires Contact Form 7.
- * Version: 4.1.0
+ * Version: 4.2.3
  * Author: SevenSpark, AuRise Creative
  * Author URI: https://sevenspark.com
  * License: GPL2
@@ -14,8 +14,8 @@
  */
 
 /*
-    Copyright 2010-2023 Chris Mavricos, SevenSpark <https://sevenspark.com>
-    Copyright 2022-2023 Tessa Watkins, AuRise Creative <https://aurisecreative.com>
+    Copyright 2010-2024 Chris Mavricos, SevenSpark <https://sevenspark.com>
+    Copyright 2022-2024 Tessa Watkins, AuRise Creative <https://aurisecreative.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -31,14 +31,24 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-// Define current version
-define('WPCF7DTX_VERSION', '4.1.0');
+define('WPCF7DTX_VERSION', '4.2.3'); // Define current version of DTX
+define('WPCF7DTX_MINVERSION', '5.7'); // The minimum version of CF7 required to use all features
+defined('WPCF7DTX_DIR') || define('WPCF7DTX_DIR', __DIR__); // Define root directory
+defined('WPCF7DTX_FILE') || define('WPCF7DTX_FILE', __FILE__); // Define root file
 
-// Define root directory
-defined('WPCF7DTX_DIR') || define('WPCF7DTX_DIR', __DIR__);
+define('WPCF7DTX_DATA_ACCESS_KB_URL', 'https://sevenspark.com/docs/contact-form-7-dynamic-text-extension/allow-data-access');
 
-// Define root file
-defined('WPCF7DTX_FILE') || define('WPCF7DTX_FILE', __FILE__);
+/**
+ * Determine Dependencies are Met
+ *
+ * @since 4.2.1
+ *
+ * @return bool True if minimum version of Contact Form 7 is met. False otherwise.
+ */
+function wpcf7dtx_dependencies()
+{
+    return defined('WPCF7_VERSION') && version_compare(constant('WPCF7_VERSION'), WPCF7DTX_MINVERSION, '>=');
+}
 
 /**
  * Initialise Plugin
@@ -47,6 +57,18 @@ defined('WPCF7DTX_FILE') || define('WPCF7DTX_FILE', __FILE__);
  */
 function wpcf7dtx_init()
 {
+    if (!wpcf7dtx_dependencies()) {
+        add_action('admin_notices', function () {
+            echo (wp_kses_post(sprintf(
+                '<div class="notice notice-error is-dismissible"><p><strong>%s</strong> %s</p></div>',
+                __('Form validation for dynamic fields created with <em>Contact Form 7 - Dynamic Text Extension</em> is not available!', 'contact-form-7-dynamic-text-extension'),
+                sprintf(
+                    __('<em>Contact Form 7</em> version %s or higher is required.', 'contact-form-7-dynamic-text-extension'),
+                    esc_html(WPCF7DTX_MINVERSION)
+                )
+            )));
+        });
+    }
     add_action('wpcf7_init', 'wpcf7dtx_add_shortcodes'); // Add custom form tags to CF7
 }
 add_action('plugins_loaded', 'wpcf7dtx_init', 20);
@@ -65,12 +87,12 @@ function wpcf7dtx_config()
         $wpcf7_dynamic_fields_config = array(
             'dynamic_text' => array(
                 'title' => __('dynamic text', 'contact-form-7-dynamic-text-extension'), //title
-                'options' => array('placeholder', 'readonly', 'dtx_pageload'),
+                'options' => array('placeholder', 'readonly'),
                 'description' => __('a single-line plain text', 'contact-form-7-dynamic-text-extension')
             ),
             'dynamic_hidden' => array(
                 'title' => __('dynamic hidden', 'contact-form-7-dynamic-text-extension'), //title
-                'options' => array('dtx_pageload'),
+                'options' => array(),
                 'description' => __('a single-line plain text hidden input field', 'contact-form-7-dynamic-text-extension'),
                 'features' => array(
                     'display-hidden' => true // Generates an HTML element that is not visible
@@ -78,12 +100,12 @@ function wpcf7dtx_config()
             ),
             'dynamic_email' => array(
                 'title' => __('dynamic email', 'contact-form-7-dynamic-text-extension'), //title
-                'options' => array('placeholder', 'readonly', 'dtx_pageload'),
+                'options' => array('placeholder', 'readonly'),
                 'description' => __('a single-line email address input field', 'contact-form-7-dynamic-text-extension')
             ),
             'dynamic_url' => array(
                 'title' => __('dynamic URL', 'contact-form-7-dynamic-text-extension'), //title
-                'options' => array('placeholder', 'readonly', 'dtx_pageload'),
+                'options' => array('placeholder', 'readonly'),
                 'description' => __('a single-line URL input field', 'contact-form-7-dynamic-text-extension')
             ),
             'dynamic_tel' => array(
@@ -103,7 +125,7 @@ function wpcf7dtx_config()
             ),
             'dynamic_textarea' => array(
                 'title' => __('dynamic textarea', 'contact-form-7-dynamic-text-extension'), //title
-                'options' => array('placeholder', 'readonly', 'dtx_pageload'),
+                'options' => array('placeholder', 'readonly'),
                 'description' => __('a multi-line plain text input field', 'contact-form-7-dynamic-text-extension')
             ),
             'dynamic_select' => array(
@@ -134,12 +156,12 @@ function wpcf7dtx_config()
             ),
             'dynamic_date' => array(
                 'title' => __('dynamic date', 'contact-form-7-dynamic-text-extension'), //title
-                'options' => array('placeholder', 'readonly', 'min', 'max'),
+                'options' => array('placeholder', 'readonly', 'min', 'max', 'step'),
                 'description' =>  __('a date input field', 'contact-form-7-dynamic-text-extension')
             ),
             'dynamic_submit' => array(
                 'title' => __('dynamic submit', 'contact-form-7-dynamic-text-extension'), //title
-                'options' => array('dtx_pageload'),
+                'options' => array(),
                 'description' =>  __('a submit button', 'contact-form-7-dynamic-text-extension')
             )
         );
@@ -247,7 +269,6 @@ function wpcf7dtx_shortcode_handler($tag)
     $atts['name'] = $tag->name;
     $atts['id'] = strval($tag->get_id_option());
     $atts['tabindex'] = $tag->get_option('tabindex', 'signed_int', true);
-    $atts['size'] = $tag->get_size_option('40');
     $atts['class'] = explode(' ', wpcf7_form_controls_class($atts['type']));
     $atts['class'][] = 'wpcf7dtx';
     $atts['class'][] = sanitize_html_class('wpcf7dtx-' . $atts['type']);
@@ -258,10 +279,22 @@ function wpcf7dtx_shortcode_handler($tag)
     } else {
         $atts['aria-invalid'] = 'false';
     }
-
     if ($tag->has_option('readonly')) {
         $atts['readonly'] = 'readonly';
     }
+
+    // Dynamically determine disabled attribute, remove if invalid
+    $atts['disabled'] = wpcf7dtx_get_dynamic(html_entity_decode(urldecode($tag->get_option('disabled', '', true)), ENT_QUOTES));
+    if ($atts['disabled'] != 'disabled') {
+        unset($atts['disabled']);
+    }
+
+    // Dynamically determine autofocus attribute, remove if invalid
+    $atts['autofocus'] = wpcf7dtx_get_dynamic(html_entity_decode(urldecode($tag->get_option('autofocus', '', true)), ENT_QUOTES));
+    if ($atts['autofocus'] != 'autofocus') {
+        unset($atts['autofocus']);
+    }
+
     // Add required attribute to applicable input types
     if ($tag->is_required() && !in_array($atts['type'], array('hidden', 'quiz'))) {
         $atts['aria-required'] = 'true';
@@ -327,12 +360,22 @@ function wpcf7dtx_shortcode_handler($tag)
         if ($atts['type'] == 'select' && $tag->has_option('include_blank')) {
             $atts['placeholder'] = wpcf7dtx_array_has_key('placeholder', $atts, __('&#8212;Please choose an option&#8212;', 'contact-form-7-dynamic-text-extension'));
         }
+        if ($atts['type'] == 'select') {
+            $atts['size'] = $tag->get_size_option('1');
+        }
     } else {
         /**
          * Configuration for text-based fields
          */
+        $atts['size'] = $tag->get_size_option('40');
+        $atts['list'] = wpcf7dtx_get_dynamic(html_entity_decode(urldecode($tag->get_option('list', '', true)), ENT_QUOTES));
+        $atts['autocapitalize'] = wpcf7dtx_get_dynamic(html_entity_decode(urldecode($tag->get_option('autocapitalize', '', true)), ENT_QUOTES));
+        $atts['pattern'] = wpcf7dtx_get_dynamic(html_entity_decode(urldecode($tag->get_option('pattern', '', true)), ENT_QUOTES));
+        $atts['min'] = wpcf7dtx_get_dynamic(html_entity_decode(urldecode($tag->get_option('min', '', true)), ENT_QUOTES));
+        $atts['max'] = wpcf7dtx_get_dynamic(html_entity_decode(urldecode($tag->get_option('max', '', true)), ENT_QUOTES));
+        $atts['step'] = wpcf7dtx_get_dynamic(html_entity_decode(urldecode($tag->get_option('step', '', true)), ENT_QUOTES));
 
-        // Attributes
+        // Min and Max length attributes
         $atts['maxlength'] = $tag->get_maxlength_option();
         $atts['minlength'] = $tag->get_minlength_option();
         if ($atts['maxlength'] && $atts['minlength'] && $atts['maxlength'] < $atts['minlength']) {
@@ -348,22 +391,26 @@ function wpcf7dtx_shortcode_handler($tag)
         }
 
         switch ($atts['type']) {
-            case 'email':
-            case 'url':
-            case 'tel':
-            case 'number':
-            case 'date':
-                // Client-side validation by type
-                $atts['class'][] =  sanitize_html_class('wpcf7-validates-as-' . $atts['type']);
-                break;
             case 'range':
                 // Client-side validation by type
                 $atts['class'][] =  'wpcf7-validates-as-number';
+                break;
+            case 'date':
+            case 'number':
+            case 'email':
+            case 'url':
+            case 'tel':
+                // Client-side validation by type
+                $atts['class'][] =  sanitize_html_class('wpcf7-validates-as-' . $atts['type']);
                 break;
             case 'textarea':
                 // Attributes unique to textareas
                 $atts['cols'] = $tag->get_cols_option('40');
                 $atts['rows'] = $tag->get_rows_option('10');
+                $atts['wrap'] = $tag->get_option('wrap', '', true);
+                if (!in_array($atts['wrap'], array('hard', 'soft'))) {
+                    unset($atts['wrap']);
+                }
                 break;
         }
     }

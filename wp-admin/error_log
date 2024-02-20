@@ -1,0 +1,39 @@
+[14-Feb-2024 09:40:24 UTC] PHP Warning:  include_once(/home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/includes/acf-utility-functions.php): failed to open stream: No such file or directory in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php on line 138
+[14-Feb-2024 09:40:24 UTC] PHP Warning:  include_once(): Failed opening '/home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/includes/acf-utility-functions.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php on line 138
+[14-Feb-2024 09:40:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function acf_include() in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php:141
+Stack trace:
+#0 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php(789): ACF->initialize()
+#1 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php(795): acf()
+#2 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-settings.php(473): include_once('/home3/shrestha...')
+#3 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-config.php(96): require_once('/home3/shrestha...')
+#4 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-load.php(50): require_once('/home3/shrestha...')
+#5 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-admin/admin.php(34): require_once('/home3/shrestha...')
+#6 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-admin/index.php(10): require_once('/home3/shrestha...')
+#7 {main}
+  in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php on line 141
+[14-Feb-2024 09:40:26 UTC] PHP Warning:  include_once(/home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/includes/acf-utility-functions.php): failed to open stream: No such file or directory in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php on line 138
+[14-Feb-2024 09:40:26 UTC] PHP Warning:  include_once(): Failed opening '/home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/includes/acf-utility-functions.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php on line 138
+[14-Feb-2024 09:40:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function acf_include() in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php:141
+Stack trace:
+#0 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php(789): ACF->initialize()
+#1 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php(795): acf()
+#2 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-settings.php(473): include_once('/home3/shrestha...')
+#3 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-config.php(96): require_once('/home3/shrestha...')
+#4 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-load.php(50): require_once('/home3/shrestha...')
+#5 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-admin/admin.php(34): require_once('/home3/shrestha...')
+#6 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-admin/index.php(10): require_once('/home3/shrestha...')
+#7 {main}
+  in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php on line 141
+[14-Feb-2024 09:40:31 UTC] PHP Warning:  include_once(/home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/includes/acf-utility-functions.php): failed to open stream: No such file or directory in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php on line 138
+[14-Feb-2024 09:40:31 UTC] PHP Warning:  include_once(): Failed opening '/home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/includes/acf-utility-functions.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php on line 138
+[14-Feb-2024 09:40:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function acf_include() in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php:141
+Stack trace:
+#0 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php(789): ACF->initialize()
+#1 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php(795): acf()
+#2 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-settings.php(473): include_once('/home3/shrestha...')
+#3 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-config.php(96): require_once('/home3/shrestha...')
+#4 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-load.php(50): require_once('/home3/shrestha...')
+#5 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-admin/admin.php(34): require_once('/home3/shrestha...')
+#6 /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-admin/index.php(10): require_once('/home3/shrestha...')
+#7 {main}
+  in /home3/shrestha/public_html/business/sbresearch.co/ndpl/wp-content/plugins/advanced-custom-fields/acf.php on line 141
