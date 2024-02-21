@@ -36,6 +36,11 @@
         </div>
 
        <div class="my-20 max-w-screen-xl mx-auto" data-scroll-section>
+            
+        <div class="pb-20">
+            <?php the_content();?>
+        </div>
+
             <?php $the_query = new WP_Query('post_type=event-calendar'); ?> 
                 <div class="mt-10">
                     <ul class="grid grid-cols-3 gap-5 mb-10">           
