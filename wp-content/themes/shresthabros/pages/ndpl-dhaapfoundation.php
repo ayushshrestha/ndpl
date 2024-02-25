@@ -37,10 +37,10 @@
 
         <?php $aboutDhaapImage = get_field('about_dhaap_image');?>
         <div class="max-w-screen-xl mx-auto mb-20" data-scroll-section>
-            <div class="text-centerX relative grid grid-cols-2 text-gray-700 my-20 block">
+            <div class="text-centerX relative grid md:grid-cols-2 text-gray-700 pt-10 md:my-20 block">
                 <div class="w-full h-full bg-primary__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $aboutDhaapImage['url'];?>');"></div>
-                <div class="relative w-full py-40 bg-primary/20X">
-                    <div class="px-20">
+                <div class="relative w-full md:py-40 bg-primary/20X">
+                    <div class="px-4 md:px-20">
                         <h3 class="font-bold text-2xl mb-3">About <?php the_title() ;?></h3>
                         <div class="text-gray-600">
                             <?php the_field('short_description');?>
@@ -48,16 +48,16 @@
                     </div>
                 </div>
             </div>
-            <div class="text-gray-600">
+            <div class="px-4 text-gray-600">
                 <?php the_field('long_description');?>
             </div>
         </div>
 
         <div class="max-w-screen-xl mx-auto" data-scroll-section>
-        <h2 class="text-2xl font-bold tracking-tight pt-12 dark:text-zinc-100">CSR Activities</h2>
+        <h2 class="text-2xl font-bold tracking-tight pt-12 dark:text-zinc-100 px-4 md:px-0">CSR Activities</h2>
         <?php if( have_rows('csr_activities') ): ?>
             <?php while( have_rows('csr_activities') ): the_row();  ?>
-                <div class="grid grid-cols-4 gap-10 mt-10 text-center bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
+                <div class="grid sm:grid-col-2 md:grid-cols-4 gap-10 mt-10 text-center bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
                     <a href="<?php echo get_site_url();?>/categorie/health" class="hover:opacity-50 transition ease duration-700">
                         <div class="mb-3"><?php $image = get_sub_field('image'); ?> 
                             <div class="w-36 h-36 mx-auto rounded-full overflow-hidden bg-gray-100"><img class="object-cover w-36 h-36" src="<?php echo $image['url'];?>" /></div>

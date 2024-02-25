@@ -80,7 +80,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="site-info text-sm text-gray-500 border-t py-8 text-center flex items-center justify-center space-x-2">
+		<div class="site-info text-sm text-gray-500 border-t py-8 text-center md:flex items-center justify-center space-x-2">
 			<a class="hidden" href="<?php echo esc_url( __( 'https://wordpress.org/', 'shresthabros' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
@@ -92,7 +92,7 @@
 			$wpFooterThreeNavMenu = array(
 				'container'     => '',
 				'theme_location'=> 'footer-menu-3',
-				'items_wrap'        => '<ul class=" flex items-center space-x-2">%3$s</ul>',
+				'items_wrap'        => '<ul class=" md:flex items-center space-x-2">%3$s</ul>',
 				'depth'         => 1,
 				'fallback_cb'   => false,
 				'add_li_class'  => 'transition text-primary hover:text-gray-300 text-sm'

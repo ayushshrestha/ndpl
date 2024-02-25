@@ -35,12 +35,12 @@
             </div>
         </div>
 
-       <div class="my-20" data-scroll-section>
+       <div class="md:my-20" data-scroll-section>
             <?php $the_query = new WP_Query('post_type=our-brands'); ?> 
-                <div class="mt-10">
+                <div class="md:mt-10">
                     <ul class="">           
                         <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-                        <li class="bg-gray-100 p-10 grid grid-cols-2 mb-10">
+                        <li class="bg-gray-100 p-4 md:p-10 grid md:grid-cols-2 mb-5 md:mb-10">
                             <div>
                                 <?php if ( has_post_thumbnail() ) {
                                     the_post_thumbnail('full', array('class' => 'w-full'));
@@ -48,7 +48,7 @@
                                     <img src="<?php bloginfo('template_directory'); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" />
                                 <?php } ?>
                             </div>
-                            <div class="flex items-center h-full px-20">
+                            <div class="flex items-center h-full md:px-20">
                                 <div>
                                     <h5 class="text-md text-gray-400 mb-2">Year: <?php the_field('year'); ?></h5>
                                     <h4 class="text-2xl font-bold font-lora mb-2"><?php the_title(); ?></h4>

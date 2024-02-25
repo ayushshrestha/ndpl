@@ -36,7 +36,7 @@
         </div>
     </div>
     
-    <div class="max-w-screen-xl mx-auto px-4 py-20 md:text-center" data-scroll-section>
+    <div class="max-w-screen-xl mx-auto px-4 py-20 text-center" data-scroll-section>
         <h2 class="text-4xl font-bold mb-36"><?php the_field('our_achievement_title'); ?></h2>
 
         <?php if( have_rows('our_achievement_content') ): ?> 
@@ -87,7 +87,7 @@
         <?php endif; ?>    
     </div> <!-- Our Values ENDs here -->
     
-    <div class="bg-red-50 px-4 py-20 md:text-center" data-scroll-section>
+    <div class="bg-red-50 px-4 py-20 text-center" data-scroll-section>
     
         <div class="max-w-screen-xl mx-auto">
             <h2 class="text-4xl font-bold"><?php the_field('our_vision_title'); ?></h2>
@@ -105,7 +105,7 @@
         </div> <!-- Benefits Container ENDs here -->
     </div> <!-- Benefits ENDs here -->
 
-    <div class="bg-red-100/50 px-4 py-20 md:text-center" data-scroll-section>
+    <div class="bg-red-100/50 px-4 py-20 text-center" data-scroll-section>
     
         <div class="max-w-screen-xl mx-auto">
             <h2 class="text-4xl font-bold"><?php the_field('our_values_title'); ?></h2>
@@ -113,7 +113,7 @@
 
             <?php if( have_rows('our_values_content') ): ?>
             <?php while( have_rows('our_values_content') ): the_row(); ?>
-                <div class="grid grid-cols-3 gap-10 mt-10 text-left bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
+                <div class="grid md:grid-cols-3 gap-10 mt-10 text-left bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
                     <div>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
@@ -216,9 +216,9 @@
         </div>
     </div> 
     
-    <div class="text-centerX relative grid grid-cols-2 text-gray-700" data-scroll-section>
+    <div class="text-centerX relative mt-40 md:mt-0 grid md:grid-cols-2 text-gray-700" data-scroll-section>
         <div class="w-full h-full bg-primary__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $postthumbnails;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
-        <div class="relative w-full py-40 bg-primary/20">
+        <div class="relative w-full py-20 md:py-40 bg-primary/20">
             <div class="px-10" data-swiper-parallax="30%" data-scroll>
                 <?php the_title( '<h3 class="font-bold text-3xl mb-3">', '</h3>' ); ?>
                 <div class="text-gray-600">
@@ -267,7 +267,7 @@
 
             <?php $the_query = new WP_Query('post_type=our-team'); ?> 
                 <div class="mt-10">
-                    <ul class="grid grid-cols-4 justify-center gap-10">           
+                    <ul class="grid sm:grid-cols-2 md:grid-cols-4 justify-center gap-10">           
                         <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                         <li>
                             <div class="image mb-5">
@@ -300,7 +300,7 @@
 
             <?php $the_query = new WP_Query('post_type=our-brands'); ?> 
                 <div class="mt-10">
-                    <ul class="grid grid-cols-4 justify-center gap-10">           
+                    <ul class="grid sm:grid-cols-2 md:grid-cols-4 justify-center gap-10">           
                         <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                         <li>
                             <div class="image mb-5">
