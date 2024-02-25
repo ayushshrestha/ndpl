@@ -47,48 +47,7 @@
         <?php endwhile; ?>
         <?php endif; ?>
 
-
-
-<!-- Modal toggle -->
-<button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-  Toggle modal
-</button>
-
-<!-- Main modal -->
-<div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative p-4 w-full max-w-2xl max-h-full">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <!-- Modal header -->
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Terms of Service
-                </h3>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
-            </div>
-            <!-- Modal body -->
-            <div class="p-4 md:p-5 space-y-4">
-                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                </p>
-                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                </p>
-            </div>
-            <!-- Modal footer -->
-            <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                <button data-modal-hide="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                <button data-modal-hide="default-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
-            </div>
-        </div>
-    </div>
-</div>
-
+        
 
         <?php if( have_rows('aboutus_banner') ): ?>
         <?php while( have_rows('aboutus_banner') ): the_row(); $aboutusBannerImage = get_sub_field('aboutus_banner_image');?>
@@ -398,13 +357,74 @@
                     <div class="max-w-screen-xl mx-auto px-8 text-white" data-scroll data-scroll-speed="2">
                         <h2 class="mb-3 text-xl md:text-4xl font-bold tracking-[-0.04em] sm:leading-[3.5rem]"><?php the_sub_field('apply_dealership_title'); ?></h2>
                         <h3 class="mb-8 md:text-xl"><?php the_sub_field('apply_dealership_paragraph'); ?></h3>
-                        <a href="" title="Domestic" class="bg-transparent hover:bg-primary text-primary font-semibold sm:leading-[3.5rem] hover:text-white py-2 md:py-4 px-4 md:px-8 border border-primary hover:border-transparent rounded transition">Domestic</a>
-                        <a href="" title="International" class="bg-transparent hover:bg-primary text-primary font-semibold sm:leading-[3.5rem] hover:text-white py-2 md:py-4 px-4 md:px-8 border border-primary hover:border-transparent rounded transition">International</a>
+                        <button title="Domestic" class="bg-transparent hover:bg-primary text-primary font-semibold sm:leading-[3.5rem] hover:text-white py-2 px-4 md:px-8 border border-primary hover:border-transparent rounded transition" onclick="openModal('modelConfirm')">Domestic</button>
+                        <button title="International" class="bg-transparent hover:bg-primary text-primary font-semibold sm:leading-[3.5rem] hover:text-white py-2 px-4 md:px-8 border border-primary hover:border-transparent rounded transition">International</button>
+
+
+                        
                     </div>
                 </div>    
             </div>
             
         </div>
+        <div id="modelConfirm" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 transition duration-700 ease">
+            <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-xl">
+
+                <div class="flex justify-end p-2">
+                    <button onclick="closeModal('modelConfirm')" type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="p-6 pt-0 text-center">
+                    <div class="border border-b-2 border-gray-200">
+                        <h3 class="text-xl font-normal text-gray-500 mt-5 mb-6">Domestic Dealership</h3>
+                        <div class="">
+                        <?php echo do_shortcode('[contact-form-7 id="8075b32" title="Domestic Dealership"]') ;?>
+                        </div>
+                    </div>
+                    <a href="#"  onclick="closeModal('modelConfirm')"
+                        class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-base inline-flex items-center px-3 py-2.5 text-center mr-2">
+                        Yes, I'm sure
+                    </a>
+                    <a href="#" onclick="closeModal('modelConfirm')"
+                        class="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-cyan-200 border border-gray-200 font-medium inline-flex items-center rounded-lg text-base px-3 py-2.5 text-center"
+                        data-modal-toggle="delete-user-modal">
+                        No, cancel
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            window.openModal = function(modalId) {
+                document.getElementById(modalId).style.display = 'block'
+                document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+            }
+
+            window.closeModal = function(modalId) {
+                document.getElementById(modalId).style.display = 'none'
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            }
+
+            // Close all modals when press ESC
+            document.onkeydown = function(event) {
+                event = event || window.event;
+                if (event.keyCode === 27) {
+                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                    let modals = document.getElementsByClassName('modal');
+                    Array.prototype.slice.call(modals).forEach(i => {
+                        i.style.display = 'none'
+                    })
+                }
+            };
+        </script>
         <?php endwhile; ?>
         <?php endif; ?>
         
