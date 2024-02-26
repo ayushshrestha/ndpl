@@ -21,7 +21,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-gray-50'); ?> id="js-scroll" data-scroll-container>
+<body <?php body_class('!bg-gray-50'); ?> id="js-scroll" data-scroll-container>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site text-gray-700 bg-gray-50">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'shresthabros' ); ?></a>

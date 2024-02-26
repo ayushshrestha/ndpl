@@ -1323,6 +1323,11 @@ video {
   background-color: rgb(255 255 255 / 0.95);
 }
 
+.\!bg-gray-50 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
+}
+
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
 }
@@ -2461,6 +2466,11 @@ Header
     padding-bottom: 10rem;
   }
 
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .md\:pb-40 {
     padding-bottom: 10rem;
   }
@@ -2471,6 +2481,10 @@ Header
 
   .md\:pt-12 {
     padding-top: 3rem;
+  }
+
+  .md\:pb-10 {
+    padding-bottom: 2.5rem;
   }
 
   .md\:text-left {
@@ -2514,6 +2528,10 @@ Header
 
   .lg\:w-2\/3 {
     width: 66.666667%;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:gap-x-12 {

@@ -36,7 +36,7 @@
         </div>
     </div>
     
-    <div class="max-w-screen-xl mx-auto px-4 py-20 text-center" data-scroll-section>
+    <div class="max-w-screen-xl mx-auto px-4 py-10 md:py-20 text-center" data-scroll-section>
         <h2 class="text-4xl font-bold mb-36"><?php the_field('our_achievement_title'); ?></h2>
 
         <?php if( have_rows('our_achievement_content') ): ?> 
@@ -246,9 +246,11 @@
             endif;
 
             ?>
-            <h3 class="font-bold text-3xl mb-3"><?php the_sub_field('our_usp_title'); ?></h3>
-            <h6 class="font-bold text-xl mb-3"><?php the_sub_field('our_usp_short_description'); ?></h6>
-            <p class="mb-10 text-gray-600"><?php the_sub_field('our_usp_content'); ?></p>
+            <div class="px-5">
+                <h3 class="font-bold text-3xl mb-3"><?php the_sub_field('our_usp_title'); ?></h3>
+                <h6 class="font-bold text-xl mb-3"><?php the_sub_field('our_usp_short_description'); ?></h6>
+                <p class="mb-10 text-gray-600"><?php the_sub_field('our_usp_content'); ?></p>
+            </div>
             <div class="image">
                 <figure>
                     <a style="background:url('<?php echo $our_usp_image['url'];?>') no-repeat center center; background-size:cover;"></a>
@@ -260,14 +262,14 @@
     <?php endif; ?> 
 
 
-    <div class="bg-red-100/50 px-4 py-20" data-scroll-section>
+    <div class="bg-red-100/50 px-4 py-10 md:py-20" data-scroll-section>
     
         <div class="max-w-screen-xl mx-auto text-center">
-            <h2 class="text-4xl font-bold pb-10">Our Team</h2>
+            <h2 class="text-4xl font-bold pb-5 md:pb-10">Our Team</h2>
 
             <?php $the_query = new WP_Query('post_type=our-team'); ?> 
-                <div class="mt-10">
-                    <ul class="grid sm:grid-cols-2 md:grid-cols-4 justify-center gap-10">           
+                <div class="md:mt-10">
+                    <ul class="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-5">           
                         <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                         <li>
                             <div class="image mb-5">
