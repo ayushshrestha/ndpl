@@ -383,7 +383,7 @@
 
                 <div class="p-6 pt-0">
                     <h3 class="text-xl font-bold text-gray-500 mt-5 mb-6">Domestic Dealership</h3>
-                    <?php echo do_shortcode('[contact-form-7 id="c5a51e3" title="Domestic Dealership"]') ;?>
+                    <?php echo apply_shortcode('[contact-form-7 id="c5a51e3" title="Domestic Dealership"]') ;?>
                 </div>
 
             </div>
