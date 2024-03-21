@@ -29,7 +29,7 @@
     ?>
     <div class="text-center relative" data-scroll-section>
         <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $postthumbnails;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
-        <div class="relative w-full py-40 bg-black/60">
+        <div class="relative w-full py-40 bg-black/60X  ">
             <div class="max-w-screen-xl mx-auto px-4 text-white" data-swiper-parallax="30%" data-scroll>
                 <?php the_title( '<h3 class="font-bold text-3xl">', '</h3>' ); ?>
             </div>

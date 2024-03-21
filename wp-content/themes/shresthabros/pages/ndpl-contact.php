@@ -13,7 +13,7 @@
  get_header();
 ?>
 
-<main id="primary" class="mx-auto text-lg tracking-tight text-slate-700" >
+<main id="primary" class="mx-auto text-lg tracking-tight" >
         <?php 
 
         // If we have a featured image, it will be used as background image using the same logic you already used, but we put the src value in a specific variable: $imageUrl
@@ -28,14 +28,14 @@
         ?>
         <div class="text-center relative" data-scroll-section>
             <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $postthumbnails;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
-            <div class="relative w-full py-40 bg-black/60">
+            <div class="relative w-full py-40 bg-black/60X  ">
                 <div class="max-w-screen-xl mx-auto px-4 text-white" data-swiper-parallax="30%" data-scroll>
                     <?php the_title( '<h3 class="font-bold text-3xl">', '</h3>' ); ?>
                 </div>
             </div>
         </div>
 
-       <div class="max-w-screen-xl mx-auto my-20" data-scroll-section>
+       <div class="max-w-screen-xl mx-auto my-20 text-slate-700" data-scroll-section>
             <div class="mx-5 xl:mx-0">
                 <div class="text-4xl font-lora font-bold mb-5">
                     <?php bloginfo( 'name' ); ?>
