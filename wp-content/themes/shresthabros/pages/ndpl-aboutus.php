@@ -36,12 +36,73 @@
         </div>
     </div>
     
-    <div class="max-w-screen-xl mx-auto px-4 py-10 md:py-20 text-center" data-scroll-section>
-        <h2 class="text-4xl font-bold mb-10"><?php the_field('our_achievement_title'); ?></h2>
+    <div class="max-w-screen-xl mx-auto px-4 py-10 md:py-20" data-scroll-section>
+        <h2 class="text-4xl font-bold mb-10 text-center"><?php the_field('our_achievement_title'); ?></h2>
 
         <?php if( have_rows('our_achievement_content') ): ?> 
         <?php while( have_rows('our_achievement_content') ): the_row(); ?>
-        <div class="grid sm:grid-cols-2 flex-col gap-10">
+
+
+        <ol class="grid grid-cols-4">
+            <li>
+                <div class="flex items-center">
+                    <div class="z-10 flex items-center justify-center w-32 h-32 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0 overflow-hidden relative">
+                        <?php $image_1 = get_sub_field('image_1'); ?> 
+                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_1['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
+                    </div>
+                    <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                </div>
+                <div class="mt-10 mx-5 p-5 bg-white">
+                    <h2 class="mb-2 leading-6 text-xl font-bold"><?php the_sub_field('second_title_1'); ?></h2>
+                    <div class="mb-0"><?php the_sub_field('second_paragraph_1'); ?></div>
+                </div>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <div class="z-10 flex items-center justify-center w-32 h-32 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0 overflow-hidden relative">
+                        <?php $image_2 = get_sub_field('image_2'); ?> 
+                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_2['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
+                    </div>
+                    <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                </div>
+                <div class="mt-10 mx-5 p-5 bg-white">
+                    <h2 class="mb-2 leading-6 text-xl font-bold"><?php the_sub_field('second_title_2'); ?></h2>
+                    <div class="mb-0"><?php the_sub_field('second_paragraph_2'); ?></div>
+                </div>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <div class="z-10 flex items-center justify-center w-32 h-32 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0 overflow-hidden relative">
+                        <?php $image_3 = get_sub_field('image_3'); ?> 
+                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_3['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
+                    </div>
+                    <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                </div>
+                <div class="mt-10 mx-5 p-5 bg-white">
+                    <h2 class="mb-2 leading-6 text-xl font-bold"><?php the_sub_field('second_title_3'); ?></h2>
+                    <div class="mb-0"><?php the_sub_field('second_paragraph_3'); ?></div>
+                </div>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <div class="z-10 flex items-center justify-center w-32 h-32 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0 overflow-hidden relative">
+                        <?php $image_4 = get_sub_field('image_4'); ?> 
+                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_4['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
+                    </div>
+                    <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                </div>
+                <div class="mt-10 mx-5 p-5 bg-white">
+                    <h2 class="mb-2 leading-6 text-xl font-bold"><?php the_sub_field('second_title_4'); ?></h2>
+                    <div class="mb-0"><?php the_sub_field('second_paragraph_4'); ?></div>
+                </div>
+            </li>
+
+        </ol>
+
+
+        <div class="grid sm:grid-cols-2 flex-col gap-10 hidden">
+
+
                 <div class="bg-gray-50 shadow-[0_0_30px_10px_rgba(0,0,0,0.05)] p-10x rounded-lg mb-3">
                     <div class="relative py-40 rounded-lg overflow-hidden"> 
                         <?php $image_1 = get_sub_field('image_1'); ?> 
@@ -264,6 +325,7 @@
                 </li>
                 <?php endwhile; wp_reset_postdata(); ?>
             </ol>
+
                 
             </div>
         
@@ -271,7 +333,22 @@
     </div> 
     
     <div class="text-centerX relative mt-40 md:mt-0 grid md:grid-cols-2 text-gray-700" data-scroll-section>
-        <div class="w-full h-full bg-primary__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $postthumbnails;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
+
+    <?php if( have_rows('about_us_content') ): ?> 
+    <?php while( have_rows('about_us_content') ): the_row();  $our_about_image = get_sub_field('our_about_image');?>
+    <?php 
+
+            // If we have a featured image, it will be used as background image using the same logic you already used, but we put the src value in a specific variable: $imageUrl
+            if ( has_post_thumbnail( $post->ID ) ) :
+                $postthumbnails = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+                $postthumbnails = $postthumbnails[0];
+            // if not, we define $imageUrl with our default image src value
+            else:
+                $postthumbnails = get_template_directory_uri() . '/images/default-image-large.jpg';
+            endif;
+
+            ?>
+        <div class="w-full h-full bg-primary__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $our_about_image['url'];?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
         <div class="relative w-full py-28 bg-primary/20">
             <div class="px-10" data-swiper-parallax="30%" data-scroll>
                 <?php the_title( '<h3 class="font-bold text-3xl mb-3">', '</h3>' ); ?>
@@ -281,7 +358,8 @@
             </div>
         </div>
     </div>
-
+    <?php endwhile; ?>
+    <?php endif; ?> 
 
 
     <?php if( have_rows('our_usp') ): ?> 
@@ -328,7 +406,7 @@
                         <li>
                             <div class="image mb-5">
                                 <figure>
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                    <a title="<?php the_title(); ?>">
                                         <?php if ( has_post_thumbnail() ) {
                                             the_post_thumbnail('full', array('class' => 'w-full'));
                                         } else { ?>
@@ -371,7 +449,7 @@
                                 </figure>
                             </div>
                             <h4 class="text-xl font-bold font-lora mb-3"><?php the_title(); ?></h4>
-                            <div class="col-span-3 mb-5"><?php echo wp_trim_words( get_the_content(), 15, '...' )?> </div>
+                            <div class="col-span-3 mb-5"><?php echo the_excerpt();?> </div>
                         </li>
                         <?php endwhile; wp_reset_postdata(); ?>
                     </ul>

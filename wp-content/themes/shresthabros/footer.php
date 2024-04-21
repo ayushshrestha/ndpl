@@ -23,7 +23,7 @@
 						'items_wrap'        => '<ul>%3$s</ul>',
 						'depth'         => 1,
 						'fallback_cb'   => false,
-						'add_li_class'  => 'hover:gray-300 pb-2 text-sm'
+						'add_li_class'  => 'hover:text-gray-300 pb-2 text-sm'
 						);
 					wp_nav_menu($wpFooterOneNavMenu); ?>
 
