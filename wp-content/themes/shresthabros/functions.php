@@ -242,7 +242,8 @@ function shresthabros_scripts() {
 	//wp_enqueue_script( 'shresthabros-locomotive-scroll', get_template_directory_uri() . '/js/locomotive-scroll.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'shresthabros-scroll-main', get_template_directory_uri() . '/js/scroll-main.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'shresthabros-slick', get_template_directory_uri() . '/js/slick.js', array(), _S_VERSION, true );
-	//wp_enqueue_script( 'shresthabros-timeline', get_template_directory_uri() . '/js/timeline.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'shresthabros-hammer', '//cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'shresthabros-timeline', get_template_directory_uri() . '/js/timeline.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'shresthabros-main', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
 
 

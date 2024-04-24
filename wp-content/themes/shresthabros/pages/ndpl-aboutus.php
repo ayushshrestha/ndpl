@@ -313,8 +313,28 @@
         <div class="max-w-screen-xl mx-auto">
             <h2 class="text-4xl font-bold">History</h2>
             <div><?php the_field('our_history_subtitle'); ?></div>
-            <?php $the_query = new WP_Query('post_type=history'); ?> 
-            <ol class="relative border-s border-primary dark:border-primary mt-10 py-10">    
+            <?php $the_query = new WP_Query('post_type=history'); ?>
+            <section class="timeline">
+                <ol>
+                    <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+                    <li>
+                        <div>
+                            <time class="text-4xl font-bold font-lora mb-3 text-gray-800 dark:text-gray-500"><?php the_title(); ?></time> <?php echo get_the_content();?>
+                        </div>
+                    </li>
+                    <?php endwhile; wp_reset_postdata(); ?>
+                </ol>
+
+                <div class="arrows">
+                    <button class="arrow arrow__prev disabled" disabled>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_prev.svg" alt="prev timeline arrow">
+                    </button>
+                    <button class="arrow arrow__next">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_next.svg" alt="next timeline arrow">
+                    </button>
+                </div>
+            </section> 
+            <ol class="relative border-s border-primary dark:border-primary mt-10 py-10 hidden">    
                 <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>              
                 <li class="mb-10 ms-4">
                     <div class="absolute w-3 h-3 bg-primary rounded-full mt-12 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>

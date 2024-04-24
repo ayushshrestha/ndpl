@@ -114,25 +114,50 @@
         </div>
             
     </div>
+
+
+    <div class="" data-scroll-section>
+
+
+
+        <div class="max-w-screen-xl mx-auto px-4 pb-20">
+            <div class="grid grid-cols-3 gap-10">
+                <div class="col-span-2">
+                    <h2 class="text-4xl font-bold mb-5">Company Culture</h2>
+                    <p>Welcome to our world of crafting quality beverages and spreading global happiness! We're more than just a company; we're joy-makers, infusing every bottle with happiness. Our commitment to transparency and honesty defines how we operate, ensuring accountability in all we do. Trust is fundamental to our relationships, fostering open communication with stakeholders. Innovation drives us forward, leading to award-winning liquors that set industry standards. We're deeply rooted in our community, prioritizing their well-being and needs. With perseverance at our core, we've weathered decades of change with resilience. Inclusivity is our norm; diversity is celebrated in our inclusive workplace. If you're passionate about making a difference, if you thrive in an environment where innovation meets integrity then come join us on our journey. Your career awaits in a place where every day is an opportunity to make a meaningful impact and spread joy one sip at a time</p>
+                </div>
+
+                <div class="bg-white p-5">
+                    <img src="http://localhost:8888/project/NDPL/ndpl/images/default-image-large.jpg" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
     <div class=" bg-white py-20" data-scroll-section>
     <div class="max-w-screen-xl mx-auto px-4 md:text-center">    
         <h2 class="text-4xl font-bold"><?php the_field('our_values_title'); ?></h2>
-        <div><?php the_field('our_values_subtitle'); ?></div>
+        <div class="hidden"><?php the_field('our_values_subtitle'); ?></div>
 
         <?php if( have_rows('our_values_content') ): ?> 
         <?php while( have_rows('our_values_content') ): the_row(); ?>
-            <div class="grid grid-cols-3 gap-10 mt-10">
-                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
+            <div class="grid grid-cols-4 gap-10 mt-10">
+                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-5 rounded-lg">
                     <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_1'); ?></h2>
                     <div class="mb-0"><?php the_sub_field('second_paragraph_1'); ?></div>
                 </div>
-                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
+                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-5 rounded-lg">
                     <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_2'); ?></h2>
                     <div class="mb-0"><?php the_sub_field('second_paragraph_2'); ?></div>
                 </div>
-                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
+                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-5 rounded-lg">
                     <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_3'); ?></h2>
                     <div class="mb-0"><?php the_sub_field('second_paragraph_3'); ?></div>
+                </div>
+                <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-5 rounded-lg">
+                    <h2 class="mb-3 text-2xl font-bold"><?php the_sub_field('second_title_4'); ?></h2>
+                    <div class="mb-0"><?php the_sub_field('second_paragraph_4'); ?></div>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -147,16 +172,16 @@
 
             <?php if( have_rows('benefits_content') ): ?>
             <?php while( have_rows('benefits_content') ): the_row(); ?>
-                <div class="grid grid-cols-2 gap-10 mt-10 text-left">
+                <div class="gridX grid-cols-2X mx-auto gap-10 mt-10 text-left">
                     <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-14 h-14">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-14 h-14 hidden">
     <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
     </svg>
 
-                        <h2 class="my-3 text-2xl font-bold"><?php the_sub_field('second_title_1'); ?></h2>
+                        <h2 class="my-3 text-2xl font-bold hidden"><?php the_sub_field('second_title_1'); ?></h2>
                         <div class="mb-0"><?php the_sub_field('second_paragraph_1'); ?></div>
                     </div>
-                    <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg">
+                    <div class="bg-gray-50 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.05)] p-10 rounded-lg hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-14 h-14">
     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
     </svg>
