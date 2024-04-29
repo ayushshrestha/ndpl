@@ -199,7 +199,7 @@
 
 
 
-    <div class="bg-red-100/50 px-4 py-20 md:pb-40 md:text-center" data-scroll-section>
+    <div class="bg-red-100/50 px-4 py-20 md:pb-40 md:text-center hidden" data-scroll-section>
     
         <div class="max-w-screen-xl mx-auto">
             <h2 class="text-4xl font-bold"><?php the_field('interview_title'); ?></h2>
