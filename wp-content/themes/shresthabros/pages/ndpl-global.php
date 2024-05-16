@@ -57,7 +57,6 @@
                         
                             <div class="lg:w-2/3 md:space-y-5x relative flex flex-col text-white">
                                 <h3 class="text-md md:text-2xl text-white font-lora font-bold mb-2 md:mb-3"><?php the_title(); ?></h3>
-                                <h2 class="mb-4 md:mb-3 text-2xl md:text-3xl text-white font-bold"><?php the_content(); ?></h2>
                                 <div class="flex">
                                     <a href="/career/job-opening" class="hover:text-secondary transition duration-300 ease flex gap-3">Apply Now
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -70,7 +69,7 @@
             </div>
     
     <div class="max-w-screen-xl mx-auto px-4 py-20" data-scroll-section>
-        
+        <div><?php the_content(); ?></div>
     </div> <!-- Benefits ENDs here -->
 
 </main>

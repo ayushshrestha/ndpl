@@ -48,7 +48,7 @@
                 <div class="flex items-center">
                     <div class="z-10 flex items-center justify-center w-32 h-32 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0 overflow-hidden relative">
                         <?php $image_1 = get_sub_field('image_1'); ?> 
-                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_1['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
+                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbeforex bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_1['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
                     </div>
                     <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="flex items-center">
                     <div class="z-10 flex items-center justify-center w-32 h-32 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0 overflow-hidden relative">
                         <?php $image_2 = get_sub_field('image_2'); ?> 
-                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_2['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
+                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbeforex bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_2['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
                     </div>
                     <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                 </div>
@@ -74,7 +74,7 @@
                 <div class="flex items-center">
                     <div class="z-10 flex items-center justify-center w-32 h-32 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0 overflow-hidden relative">
                         <?php $image_3 = get_sub_field('image_3'); ?> 
-                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_3['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
+                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbeforex bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_3['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
                     </div>
                     <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                 </div>
@@ -87,7 +87,7 @@
                 <div class="flex items-center">
                     <div class="z-10 flex items-center justify-center w-32 h-32 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0 overflow-hidden relative">
                         <?php $image_4 = get_sub_field('image_4'); ?> 
-                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbefore bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_4['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
+                        <div class="w-full h-full absolute left-0 top-0 bg-darkred__gtbeforex bg-no-repeat bg-center bg-cover bg-fixed"  style="background-image:url('<?php echo $image_4['url'] ;?>');"  data-swiper-parallax="30%" data-scroll data-scroll-offset="100%, 0%"></div>
                     </div>
                     <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                 </div>
@@ -202,7 +202,7 @@
         <?php endif; ?>    
     </div> <!-- Our Values ENDs here -->
     
-    <div class="bg-red-50 px-4 py-20 text-center" data-scroll-section>
+    <div class="bg-red-100/50 px-4 pt-20 pb-10 text-center" data-scroll-section>
     
         <div class="max-w-screen-xl mx-auto">
             <h2 class="text-4xl font-bold"><?php the_field('our_vision_title'); ?></h2>
